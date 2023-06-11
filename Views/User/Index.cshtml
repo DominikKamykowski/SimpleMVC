@@ -1,0 +1,53 @@
+﻿@model IEnumerable<UserDto>
+
+@{
+	ViewData["Title"] = "Uczestnicy konkursu";
+}
+
+
+<h2>Uczestnicy konkursu</h2>
+
+@if(Model.Any())
+{
+	<table class="table">
+		<thead class="tab-pane">
+			<tr>
+				<th>Imie</th>
+				<th>Nazwisko</th>
+				<th>Email</th>
+				<th>
+					<a class="btn btn-outline-primary float-right"
+					asp-action="Add">Dodaj uczestnika</a>
+				</th>
+			</tr>
+		</thead>
+		<tbody class="tab-content">
+			@foreach(var item in Model)
+			{
+				<tr>
+					<td>
+						@item.Name
+					</td>
+					<td>
+						@item.LastName
+					</td>
+					<td>
+						@item.Email
+					</td>
+					<td>
+						<form method="post" asp-action="delete" asp-route-id="@item.Id">
+							<button type="submit" class="btn btn-link text-danger float-right">Usuń</button>
+						</form>
+					</td>
+				</tr>
+			}
+		</tbody>
+
+	</table>
+
+
+}
+else 
+{
+	<p>Brak uczestników konkursu</p>
+}
