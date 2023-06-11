@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Rejestracja.Models;
 using Rejestracja.Repository;
 
 namespace Rejestracja.Controllers
@@ -14,5 +15,23 @@ namespace Rejestracja.Controllers
         {
             return View(userService.Read());
         }
-    }
+
+        public IActionResult Add()
+        {
+            return View(new UserModel());
+        }
+        [HttpPost]
+		public IActionResult Add(UserModel model)
+		{
+			if(ModelState.IsValid) 
+            {
+                userService.Create(model);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View(model);
+            }
+		}
+	}
 }

@@ -43,3 +43,4 @@ C:\Users\Dominik\source\repos\Rejestracja\Rejestracja\obj\Debug\net5.0\Rejestrac
 C:\Users\Dominik\source\repos\Rejestracja\Rejestracja\obj\Debug\net5.0\Rejestracja.genruntimeconfig.cache
 C:\Users\Dominik\source\repos\Rejestracja\Rejestracja\obj\Debug\net5.0\ref\Rejestracja.dll
 C:\Users\Dominik\source\repos\Rejestracja\Rejestracja\obj\Debug\net5.0\Rejestracja.csproj.CopyComplete
+C:\Users\Dominik\source\repos\Rejestracja\Rejestracja\obj\Debug\net5.0\Razor\Views\User\Add.cshtml.g.cs
